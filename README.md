@@ -104,11 +104,3 @@ Contributions to the Kanban Collaborative Project Management Platform API are we
 5. Create a pull request with a clear description of your changes.
 
 Contributions that improve functionality, performance, and user experience are highly appreciated.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
----
-
-Feel free to customize this README further based on your specific project details and preferences.
