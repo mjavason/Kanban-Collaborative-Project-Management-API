@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
-import { commentValidation } from '../validations';
-import { commentController } from '../controllers';
+import { commentValidation } from '../../../validation';
+import { commentController } from '../../../controllers';
 import {
   processRequestBody,
   processRequestParams,

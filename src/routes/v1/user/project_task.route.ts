@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
-import { projectTaskValidation } from '../validations';
-import { projectTaskController } from '../controllers';
+import { projectTaskValidation } from '../../../validation';
+import { projectTaskController } from '../../../controllers';
 import {
   processRequestBody,
   processRequestParams,

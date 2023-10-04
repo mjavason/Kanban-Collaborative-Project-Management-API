@@ -4,3 +4,6 @@
 // export { whatever } from './whatever';
 
 export { authValidation } from './auth.validation';
+export { projectValidation } from './project.validation';
+export { projectTaskValidation } from './project_task.validation';
+export { commentValidation } from './comment.validaton';
