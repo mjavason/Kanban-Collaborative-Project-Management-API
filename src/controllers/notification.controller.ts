@@ -62,15 +62,18 @@ class Controller {
     return SuccessResponse<INotification[]>(res, data);
   };
 
-  broadcast = async (notificationTitle: string, notificationBody: string) => {
+  broadcast = async (notificationTitle: string, notificationBody: string, room: string) => {
     const data = await notificationService.find({});
     if (!data) return false;
     if (data.length === 0) return false;
 
     for (let i = 0; i < data.length; i++) {
       try {
-        const payload = JSON.stringify({ title: notificationTitle, body: notificationBody });
-        webpush.sendNotification(data[i].subscription, payload).catch(console.log);
+        if (data[i].rooms.includes(room)) {
+          const payload = JSON.stringify({ title: notificationTitle, body: notificationBody });
+          webpush.sendNotification(data[i].subscription, payload).catch(console.log);
+        }
+        console.log('User not in room');
       } catch (e: any) {
         console.log(e);
       }
