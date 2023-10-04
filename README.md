@@ -82,7 +82,7 @@ To create a new Kanban board for a project, make a POST request to the `/project
 Example using curl:
 
 ```bash
-curl -X POST http://localhost:5000/api/v1/project -d "title=Your Project Name" -d "description=Your Project Description"  -d "start_date=2023-10-01" -d "end_date=2023-10-31"
+curl -X POST http://localhost:5000/api/v1/project -d "creator=Your User ID" -d "members[]=Member1 ID" -d "members[]=Member2 ID" -d "start_date=2023-10-01" -d "end_date=2023-10-31" -d "states[]=To Do" -d "states[]=In Progress" -d "title=Your Project Name" -d "description=Your Project Description" -d "tags[]=Tag1" -d "tags[]=Tag2"
 ```
 
 ## Documentation
