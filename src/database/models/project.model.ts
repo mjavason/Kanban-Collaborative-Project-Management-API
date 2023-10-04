@@ -29,7 +29,8 @@ const projectSchema = new Schema<IProject>(
     states: [
       {
         type: String,
-        required: true,
+        required: false,
+        default: ['To Do', 'In Progress', 'Done'],
       },
     ],
     title: {

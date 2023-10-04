@@ -8,6 +8,6 @@ import isAuth from '../../../middleware/is_auth.middleware';
 router.use(isAuth);
 router.use('/project', projectRouter);
 router.use('/project/task', projectTaskRouter);
-router.use('project/comment', commentRouter);
+router.use('project/task/comment', commentRouter);
 
 export default router;
