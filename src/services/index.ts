@@ -10,3 +10,4 @@ export { resetTokenService } from './reset_token.service';
 export { projectService } from './project.service';
 export { projectTaskService } from './project_task.service';
 export { commentService } from './comment.service';
+export { notificationService } from './notification.service';

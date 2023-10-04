@@ -10,7 +10,7 @@ class Validation {
       }),
       content: z.string().min(1),
       attachments: z.array(z.string().trim()).optional(),
-      projectTaskId: z.string().refine((value) => Types.ObjectId.isValid(value), {
+      project_task: z.string().refine((value) => Types.ObjectId.isValid(value), {
         message: 'Invalid ObjectId format',
       }),
     }),
@@ -24,14 +24,20 @@ class Validation {
       }),
     }),
     body: z.object({
-      user: z.string().refine((value) => Types.ObjectId.isValid(value), {
-        message: 'Invalid ObjectId format',
-      }).optional(),
+      user: z
+        .string()
+        .refine((value) => Types.ObjectId.isValid(value), {
+          message: 'Invalid ObjectId format',
+        })
+        .optional(),
       content: z.string().min(1).optional(),
       attachments: z.array(z.string().trim()).optional(),
-      projectTaskId: z.string().refine((value) => Types.ObjectId.isValid(value), {
-        message: 'Invalid ObjectId format',
-      }).optional(),
+      project_task: z
+        .string()
+        .refine((value) => Types.ObjectId.isValid(value), {
+          message: 'Invalid ObjectId format',
+        })
+        .optional(),
       deleted: z.boolean().optional(),
     }),
   };
@@ -48,17 +54,26 @@ class Validation {
   // Validation schema for retrieving comments with specific criteria
   find = {
     query: z.object({
-      _id: z.string().refine((value) => Types.ObjectId.isValid(value), {
-        message: 'Invalid ObjectId format',
-      }).optional(),
-      user: z.string().refine((value) => Types.ObjectId.isValid(value), {
-        message: 'Invalid ObjectId format',
-      }).optional(),
+      _id: z
+        .string()
+        .refine((value) => Types.ObjectId.isValid(value), {
+          message: 'Invalid ObjectId format',
+        })
+        .optional(),
+      user: z
+        .string()
+        .refine((value) => Types.ObjectId.isValid(value), {
+          message: 'Invalid ObjectId format',
+        })
+        .optional(),
       content: z.string().min(1).optional(),
-      projectTaskId: z.string().refine((value) => Types.ObjectId.isValid(value), {
-        message: 'Invalid ObjectId format',
-      }).optional(),
-      deleted: z.boolean().optional(),
+      project_task: z
+        .string()
+        .refine((value) => Types.ObjectId.isValid(value), {
+          message: 'Invalid ObjectId format',
+        })
+        .optional(),
+      deleted: z.string().optional(),
     }),
   };
 }

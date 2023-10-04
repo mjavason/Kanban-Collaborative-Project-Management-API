@@ -9,3 +9,4 @@ export { resetTokenController } from './reset_token.controller';
 export { projectController } from './project.controller';
 export { projectTaskController } from './project_task.controller';
 export { commentController } from './comment.controller';
+export { notificationController } from './notification.controller';

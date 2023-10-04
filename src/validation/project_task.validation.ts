@@ -85,7 +85,7 @@ class Validation {
           }),
         )
         .optional(),
-      deleted: z.boolean().optional(),
+      deleted: z.string().optional(),
     }),
   };
 }

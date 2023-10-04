@@ -78,10 +78,10 @@ class Validation {
           message: 'Invalid ObjectId format',
         })
         .optional(),
-      start_date: z.date().optional(),
-      end_date: z.date().optional(),
+      start_date: z.string().optional(),
+      end_date: z.string().optional(),
       states: z.array(z.string().trim()).optional(),
-      deleted: z.boolean().optional(),
+      deleted: z.string().optional(),
     }),
   };
 }
